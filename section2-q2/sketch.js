@@ -1,6 +1,6 @@
 // チェッカー
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(400, 4000);
   let size = width / 8;
   noStroke();
   for(let i = 0; i < 8; i++){
