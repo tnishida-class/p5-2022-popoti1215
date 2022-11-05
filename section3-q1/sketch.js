@@ -14,5 +14,13 @@ function draw(){
   // BLANK[1]
   let size = count
   fill(171,44,39)
-  ellipse(width / 2, height / 2, size);
+  if(count<50){
+    ellipse(width / 2, height / 2, 50);
+  }
+  else if(50<=count<60){
+    ellipse(width / 2, height / 2, size/2)
+  }
+  else {
+    ellipse(width / 2, height / 2, 50);
+  }
 }
