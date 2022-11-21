@@ -65,9 +65,8 @@ function setup(){
   }
 
   // BLANK[5] 平均点の線を引きます
-  function draw(){
+  
     stroke(57, 252, 3);
-    strokeWeight(10);
-    line(0, height*average/100, width, height*average/100);
-  }
+    line(0, height - (height*average/100), width, height - (height*average/100));
+  
 }
