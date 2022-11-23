@@ -12,12 +12,12 @@ function draw(){
   background(160, 192, 255);
   for(let i = 0; i < balls.length; i++){ // すべてのボールを描画し、速度の分だけ移動させる
     let b = balls[i];
-    // let size = size[j];
-    // size[j] = random(20.60);
-    let size = [];
-for(let j = 0; j < balls.length; j++){
-  size.push(random(20, 50)); // 20以上50未満のランダムな数を追加
-}
+    //  let size = size[j];
+    //  size[j] = random(20.60);
+    //  let size = size[j];
+  // for(let j = 0; j < balls.length; j++)
+  //  size.push(random(20, 50)); // 20以上50未満のランダムな数を追加
+
 
     ellipse(b.x, b.y, b.size);
     b.x += b.vx;
@@ -29,7 +29,7 @@ for(let j = 0; j < balls.length; j++){
    const dx = mouseX - pmouseX;
    const dy = mouseY - pmouseY;
    if(mag(dx, dy) > 5){ // mag(x,y) はベクトル(x,y)の長さ
-     const b = { x: mouseX, y: mouseY, vx: dx, vy: dy, size: size };
+     const b = { x: mouseX, y: mouseY, vx: dx, vy: dy, size:random(20, 50) };
      balls.push(b);
    }
  }
