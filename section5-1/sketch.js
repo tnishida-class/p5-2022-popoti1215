@@ -15,6 +15,7 @@ function setup(){
 // ヒント：section5-2 にある star 関数をここにコピーして、 draw 内で ellipse の代わりに使おう
 function star(cx, cy, r){
   beginShape();
+  noStroke()
   for(var i = 0; i < 5; i++){
     let theta = TWO_PI * i * 2 / 5 - HALF_PI;
     let x = cx + cos(theta) * r;
