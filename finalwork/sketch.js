@@ -1,15 +1,18 @@
 // 最終課題を制作しよう
 
-let x, y; // ポイント1：関数の外で変数を宣言する
+let x, y; 
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
   x = width / 2;
   y = height / 2;
+
+  m = width / 8;
+  n = height / 8;
 }
 
 function draw(){
-  background(160, 192, 255); // ポイント2: draw の最初に background を書く
+  background(160, 192, 255); 
   noFill();
   for(let i = 100; i >=60; i=i-10){
     stroke(255, 0, 0);
@@ -24,6 +27,25 @@ function draw(){
   if(y > height){ y = 0; }
   else if(y < 0){ y = height; } 
 
+  rect(n, n, 30, 30);
+  
+  instruction("Hit the target!");
 
+}
+
+function mouseClicked(){
+  n += x;
+  if(n > x){ n = 0; }
+  else if(n < 0){ n = width; } 
+}
+
+function instruction(t){  
+  let w = textWidth(t);
+  let h = textAscent() + textDescent();
+  let p = 2;
+  fill(0);
+  rect(0, 0, w + p * 2, h + p * 2);
+  fill(255);
+  text(t, p, h + p);
 }
 
