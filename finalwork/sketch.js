@@ -29,7 +29,7 @@ function draw(){
 
   rect(n, n, 50, 3);
   
-  instruction("Hit the target!　マウスをクリックして、棒を的の中心に一発で当ててください");
+  instruction("Hit the target!　マウスをクリックして、棒を的の中心に一発で当ててください。当たったからといって何かあると思わないでください。");
 
 }
 
