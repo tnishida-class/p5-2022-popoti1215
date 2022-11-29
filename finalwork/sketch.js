@@ -27,15 +27,15 @@ function draw(){
   if(y > height){ y = 0; }
   else if(y < 0){ y = height; } 
 
-  rect(n, n, 30, 30);
+  rect(n, n, 50, 3);
   
-  instruction("Hit the target!");
+  instruction("Hit the target!　マウスをクリックして、棒を的の中心に一発で当ててください");
 
 }
 
 function mouseClicked(){
-  n += x;
-  if(n > x){ n = 0; }
+  n += x - 50 ;
+  if(n > x - 50){ n = 0; }
   else if(n < 0){ n = width; } 
 }
 
